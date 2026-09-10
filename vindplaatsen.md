@@ -48,7 +48,7 @@ De URL's uit het juli-dossier zijn deels verlopen. Hieronder staat wat er op 10 
 | # | Gids | Werkende route | Wat het vraagt | Waarde |
 |---|---|---|---|---|
 | C1 | Product Hunt | https://www.producthunt.com | account; eerst maker-profiel en productpagina, nog niet lanceren | dofollow bij feature |
-| C2 | **Capterra + GetApp + Software Advice** | https://app.g2digitalmarkets.com/get-listed/start | kort formulier: zakelijk e-mailadres, productnaam, product-URL. **Eén aanvraag dekt alle drie** — Gartner Digital Markets loopt nu via G2. De oude `capterra.com/vendors/sign-up` geeft 404 | hoogste van de lijst |
+| C2 | **Capterra + GetApp + Software Advice** | https://app.g2digitalmarkets.com/get-listed/start | kort formulier: zakelijk e-mailadres, productnaam, product-URL. **Eén aanvraag dekt alle drie** — Gartner Digital Markets loopt nu via G2. De oude `capterra.com/vendors/sign-up` geeft 404. **10 sep geprobeerd en geweigerd**: "We could not complete your product listing request. Try signing in instead." Zie §I | hoogste van de lijst |
 | C3 | G2 (reviews) | https://www.g2.com, via "For Vendors" | account op bedrijfsdomein | profiel-elementen dofollow |
 | C4 | SaaSworthy | https://www.saasworthy.com, via "List your product" | formulier | verifiëren na plaatsing |
 | C5 | SaaSHub | https://www.saashub.com/submit | gratis, vraagt Register of Login. De dossier-URL `/submit-service` geeft 404 | verifiëren |
@@ -112,34 +112,44 @@ Google Bedrijfsprofiel (voor dit bedrijf niet beschikbaar zonder bezoekadres; se
 4. **Open besluit voor Mink.** `schema.logo` wijst nog naar `https://signumcore.io/logo-512.png`: het oude teal-logo van 87 kB. Dát bestand trekken gidsen en AI-assistenten. Het monogram staat sinds PR #563 live op `https://signumcore.io/brand/signumcore-monogram-512.png` (14 kB). De wissel is een merkkeuze, dus niet eigenmachtig gedaan.
 5. **Open punt.** `llms.txt` sluit af met "Laatste update: augustus 2026" terwijl de inhoud op 10 september is herschreven. Dat bestand is precies wat AI-assistenten citeren.
 
-## H. Volgorde — bijgewerkt 10 sep 2026
+## H. Volgorde — bijgewerkt 10 sep 2026 (avond)
 
 Wat af is staat in §I. Dit is wat er nog ligt, op volgorde van waarde.
 
-**1. Vier muren, alleen jij kunt erdoor**
+**1. De vier muren zijn weg.** Facebook, X, Threads en de Reddit-beelden staan
+live. Er is op dit moment geen enkel social-kanaal dat op een menselijke stap
+wacht — de resterende platforms (A8 TikTok, A9 Pinterest, A10 Bluesky,
+A11 Mastodon) hebben nog geen account en vragen er allemaal één.
 
-| Wat | Waarom het vastzit | Wat jij doet |
-|---|---|---|
-| Facebook-pagina | "Finish SMS verification on mobile app" — vijf pogingen, geen omweg | SMS-verificatie ín de Meta-app afronden, dan zeg ik het en vul ik de pagina |
-| X `signumcore_io` | registratie niet afgerond; alleen telefoon, Google of Apple | code invoeren, handle `signumcore_io` |
-| Threads | de koppelknop is tegelijk het akkoord op de voorwaarden | één klik op threads.com |
-| Reddit-avatar en -banner | het bestandsveld verschijnt pas ná de dialoog en staat niet in de toegankelijkheidsboom | twee uploads uit `uit/` |
+**2. Hoogste waarde die zonder account kan**
 
-**2. Hoogste waarde die vandaag kan (kort formulier, geen account vooraf)**
-
-C2 — G2 Digital Markets. Eén aanvraag dekt Capterra, GetApp én Software Advice. De drie velden staan klaar in §C.
+C2 — G2 Digital Markets. Eén aanvraag dekt Capterra, GetApp én Software Advice.
+De drie velden staan klaar in §C. Het formulier is tegelijk het akkoord op de
+privacyverklaring van Gartner Digital Markets, dus dat is een besluit van Mink.
 
 **3. Daarna, twee à drie per week**
 
-C1 Product Hunt (maker-profiel, nog niet lanceren) · C9 Crunchbase · B2 Dev.to (via GitHub) · B8 Gravatar · C3 G2-reviews · C8 BetaList · D2 Clutch · D3 GoodFirms · C12 Techleap · C13 Appwiki.
+C1 Product Hunt (maker-profiel, nog niet lanceren) · C9 Crunchbase · B2 Dev.to
+(via GitHub) · B8 Gravatar · C3 G2-reviews · C8 BetaList · D2 Clutch ·
+D3 GoodFirms · C12 Techleap · C13 Appwiki.
 
-**4. Overslaan tot ze weer werken**
+**4. Nieuwe accounts, in deze volgorde**
 
-C14 Softwarevergelijken.nl (site ligt eruit) · E1 Startpagina (geen aanmeldroute meer) · C6 AlternativeTo en C5 SaaSHub (alleen via inloggen, lage waarde).
+A10 Bluesky (handle wordt het domein `signumcore.io`, daarna DNS TXT `_atproto`
+op Vercel DNS) · A11 Mastodon (`rel=me` levert een geverifieerd vinkje, het enige
+kanaal in deze lijst dat écht iets teruggeeft) · A9 Pinterest (site claimen via
+metatag) · A8 TikTok. De eerste twee zijn het meest waard omdat ze allebei een
+on-site tegenhanger hebben in §G.
 
-**5. Na elke ronde**
+**5. Overslaan tot ze weer werken**
 
-URL in §I loggen, afwijkende handle vastleggen, en een website-PR met de nieuwe `sameAs`-URL's.
+C14 Softwarevergelijken.nl (site ligt eruit) · E1 Startpagina (geen aanmeldroute
+meer) · C6 AlternativeTo en C5 SaaSHub (alleen via inloggen, lage waarde).
+
+**6. Na elke ronde**
+
+URL in §I loggen, afwijkende handle vastleggen, en een website-PR met de nieuwe
+`sameAs`-URL's. Draai `node build/check-sync.mjs` vóór je iets publiceert.
 
 ## I. Log
 
@@ -160,6 +170,8 @@ URL in §I loggen, afwijkende handle vastleggen, en een website-PR met de nieuwe
 | 2026-09-10 | YouTube | https://www.youtube.com/@signumcore | kanaalbanner vervangen door de opnieuw gerenderde 2560x1440 met de titelzin uit PR #566 | nofollow |
 | 2026-09-10 | LinkedIn | https://www.linkedin.com/company/signumcore | coverafbeelding bijgewerkt. De slogan is **niet** aangepast: een tweede sessie zat op datzelfde moment in dezelfde velden en LinkedIn gaf "Een andere beheerder van deze pagina probeert gelijktijdig wijzigingen te maken" | nofollow |
 | 2026-09-10 | Reddit | https://www.reddit.com/user/SignumCoreio/ | avatar en banner staan er nu op. Route: zie hieronder | nofollow |
+| 2026-09-10 | G2 Digital Markets (C2) | app.g2digitalmarkets.com/get-listed/start | **geweigerd**. Formulier ingevuld met info@signumcore.io / SignumCore / https://signumcore.io, vinkje voor verkoopcontact uit. Antwoord: "We could not complete your product listing request. Try signing in instead." Capterra kent SignumCore niet (zoekopdracht gaf 20 andere producten), dus het is geen bestaande vermelding maar een bestaand account of e-mailadres in hun systeem. `/login` vraagt een wachtwoord: dat is een menselijke stap. Route: "Forgot your login?" met info@signumcore.io | — |
+| 2026-09-10 | Facebook-pagina | https://www.facebook.com/profile.php?id=61594027991854 | gebruikersnaam `signumcore` kon **niet** geclaimd worden: geen veld in Instellingen, niet in Paginagegevens, niet in het Professioneel dashboard, en `professional_dashboard/page_settings` geeft een fout. Facebook geeft die pas vrij bij activiteit. De numerieke URL is tot dan de canonieke; hij staat met die uitleg in `sameAs` (PR #571) | nofollow |
 
 ### Herhaalde pogingen op 10 sep (avond)
 

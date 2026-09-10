@@ -13,6 +13,18 @@
 | 2026-09-10 | Threads | — | één klik via threads.com ("Join with Instagram — signumcore_io"); die knop is het akkoord op de voorwaarden, dus die zet Mink zelf | — |
 | 2026-09-10 | Facebook-pagina | — | **geblokkeerd**: "We noticed suspicious activity — Finish SMS verification on mobile app before creating a new page." Vier pogingen, ook na installatie van de Meta-app. Formulier stond compleet (naam, categorie Marketingbureau, bio). Mink: SMS-verificatie ín de app afronden | — |
 
+### Herhaalde pogingen op 10 sep (avond)
+
+- **Facebook** — vijfde poging, formulier compleet, zelfde blokkade: "We noticed suspicious activity — Finish SMS verification on mobile app before creating a new page." Er is geen omweg via Business Suite. Wacht op Minks SMS-verificatie in de Meta-app.
+- **X** — `x.com/signumcore_io` geeft "This account doesn't exist": de registratie is niet afgerond. Wacht op de SMS-code.
+- **Threads** — `threads.com/@signumcore_io` leidt naar de aanmeldpagina. De knop "Use your Instagram account" is tegelijk het akkoord op de voorwaarden; die zet Mink.
+- **Reddit avatar en banner** — nu preciezer gemeten dan eerder: het `input[type=file]` bestáát wél (accept `image/x-png,image/jpeg,image/png`), maar pas nadat de Banner-dialoog geopend is, en het staat niet in de toegankelijkheidsboom. `find` vindt het daardoor niet en `file_upload` kan er geen ref voor krijgen. Blijft handwerk.
+
+### Twee dingen op de site zelf die hierop wachten
+
+- **`schema.logo` wijst nog naar `/logo-512.png`** — het oude teal-logo (87 kB). Gidsen en AI-assistenten trekken juist dát bestand. Het monogram staat sinds PR #563 live op `/brand/signumcore-monogram-512.png` (14 kB). De wissel is een merkbesluit van Mink, dus niet eigenmachtig gedaan.
+- **`llms.txt` sluit af met "Laatste update: augustus 2026"** terwijl de inhoud op 10 september is herschreven. Dat bestand is precies wat AI-assistenten citeren.
+
 ### Vallen bij het bijwerken
 
 - **LinkedIn laadt het Overzicht-veld leeg.** Op de tab Details staat `Overzicht` op 0/2.000 terwijl de pagina publiek wél een tekst toont. Opslaan zonder het veld opnieuw te vullen wist de tekst. Vul hem dus altijd opnieuw vóór je op die tab opslaat.

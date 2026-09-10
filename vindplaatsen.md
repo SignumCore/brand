@@ -70,23 +70,31 @@ Op https://app.g2digitalmarkets.com/get-listed/start:
 
 Beschrijving en categorie volgen in een tweede stap. Gebruik `profiel-teksten.md` §4 (EN) en de categorie Marketing Analytics of PPC.
 
-## D. Bureaugidsen (past bij KVK-activiteit 73110 en "adverteren uitbesteden")
+## D. Bureaugidsen — routes nagemeten op 10 sep 2026
 
-| # | Gids | Aanmelden | Menselijk | Dofollow |
+SignumCore staat hier als uitvoerder (KVK 73110, "adverteren uitbesteden"), niet als leverancier vóór bureaus. Dat onderscheid is sinds de versmalling belangrijk: de teksten uit `profiel-teksten.md` §3 en §4 passen, de oude bureau-teksten niet.
+
+| # | Gids | Werkende route | Wat het vraagt | Waarde |
 |---|---|---|---|---|
-| D1 | Sortlist (NL/EU) | https://www.sortlist.nl/agency/signup | account; profiel wordt gescreend | nofollow |
-| D2 | Clutch | https://clutch.co/get-listed | account; reviews via klanten | nofollow |
-| D3 | GoodFirms | https://www.goodfirms.co/get-listed | account | verifiëren |
-| D4 | DesignRush | https://www.designrush.com/agency/register | account | verifiëren |
+| D1 | Sortlist | https://www.sortlist.com/join → kies de kant "provider" | account. De dossier-URL `sortlist.nl/agency/signup` geeft **404** ("Dit bureau bestaat niet in ons directory-systeem") | nofollow |
+| D2 | Clutch | https://clutch.co/get-listed | account; reviews komen van klanten, die zijn er nog niet | nofollow |
+| D3 | GoodFirms | https://www.goodfirms.co/get-listed | account | verifiëren na plaatsing |
+| D4 | DesignRush | https://www.designrush.com/submit/agency | account. De dossier-URL `/agency/register` geeft **404** | verifiëren |
 
-## E. Ouderwetse linkpagina's en NL-gidsen zonder adres
+Let op bij alle vier: ze vragen om klantreferenties en reviews. Die zijn er niet, en verzinnen mag niet (zie de eerlijkheidsregel). Vul in wat waar is en laat de rest leeg.
 
-| # | Plek | Hoe | Opmerking |
+## E. Ouderwetse linkpagina's — grotendeels vervallen
+
+Dit was de zwakste categorie van het juli-dossier en dat blijkt te kloppen.
+
+| # | Plek | Stand op 10 sep | Advies |
 |---|---|---|---|
-| E1 | Startpagina-dochters | zoek de dochterpagina's "google-ads", "adverteren", "online-marketing", "webdesign" op startpagina.nl; "link aanmelden" per pagina | gratis, wachttijd, dofollow wisselt |
-| E2 | Jouwpagina.nl / Uwpagina.nl-familie | zelfde werkwijze | controleren of nog actief |
-| E3 | Bedrijvenpagina.nl | https://www.bedrijvenpagina.nl | vraagt meestal plaats, niet altijd straat |
-| E4 | Quora (NL-vragen over Google Ads) | profiel met link; antwoorden, geen spam | nofollow, doorklik |
+| E1 | Startpagina-dochters | De dochterpagina's bestaan nog (`online-marketing`, `marketing`, `reclame`, `seo`, `webdesign`, `internetmarketing`, `zoekmachinemarketing` op `.startpagina.nl`), maar `adverteren.startpagina.nl` bestaat niet en de enige aanmeldknop wijst naar `panel.startpagina.nl` — **die leidt zelf naar "thema-not-found"**. Er is geen werkende route meer om een link aan te melden | overslaan |
+| E2 | Jouwpagina.nl | Leeft; heeft "Submit link" en "Exchange link" in de navigatie | lage waarde, maar gratis en werkt |
+| E3 | Bedrijvenpagina.nl | Leeft; NL-bedrijvengids met categorieën, vraagt inloggen | account nodig; categorie Advies & Consultancy |
+| E4 | Quora | Leeft | profiel met link, dán antwoorden. Nooit andersom |
+
+Waarde-oordeel: E1 is dood, E2 is een linkfarm met weinig gewicht, E3 is een gewone NL-gids. Zet hier weinig tijd in; C2 (G2 Digital Markets) is meer waard dan E1 tot en met E4 samen.
 
 ## F. Geparkeerd tot adres + telefoon bestaan (NAP-dossier)
 

@@ -34,10 +34,10 @@ Twee merges hebben de propositie versmald. Alles hieronder is daarop herschreven
 
 ## 2. Kernzinnen (letterlijk uit de code, niet herschrijven)
 
-- **Belofte** (`BELOFTE_KOP`): `Alles voor je aanvragen in één systeem.`
-- **Accent** (`BELOFTE_KOP_ACCENT`): `Je ziet wat het oplevert.`
-- **Titelzin** (`BELOFTE_TITEL`): `Adverteren in Google uitbesteden — en zien wat het oplevert`
-- **Sub** (`BELOFTE_SUB`): `Wij draaien je advertenties, meten je aanvragen en sturen bij.`
+- **Belofte** (`BELOFTE_KOP`): `Ben jij de baas over jouw bedrijf?`
+- **Accent** (`BELOFTE_KOP_ACCENT`): `Dan wil je weten wat een aanvraag je kost.`
+- **Titelzin** (`BELOFTE_TITEL`): `Wat kost een aanvraag je? Adverteren in Google, met het cijfer erbij`
+- **Sub** (`BELOFTE_SUB`): `Eén bedrag per maand. Niets verandert zonder jouw akkoord.`
 - **Maatstaf** (`MAATSTAF`): `wat een aanvraag je kost`
 - **Micro** (`BELOFTE_MICRO_DELEN`): `vaste prijs · geen percentage over je advertentiebudget`
 - **Sessie-kop** (`/webinar`): `Ben jij de baas over jouw bedrijf?` — `Dan wil je weten wat een aanvraag je kost.` (het woord wisselt: aanvraag / offerte / afspraak / telefoontje)
@@ -67,7 +67,7 @@ Twee merges hebben de propositie versmald. Alles hieronder is daarop herschreven
 > Weet jij wat een aanvraag je kost? Wij draaien je Google-advertenties en meten.
 
 **Kort — 150 tekens (Instagram, Threads):**
-> Adverteren in Google uitbesteden — en zien wat het oplevert. Elke maand één bedrag: wat een aanvraag je kost. Vaste prijs. Aanmelden voor de sessie ↓
+> Wat kost een aanvraag je? Wij beheren je Google-advertenties en zetten het cijfer erbij. Eén bedrag per maand. Aanmelden voor de sessie ↓
 
 **Kort — 160 tekens (X, GitHub-organisatie):**
 > Wij draaien je Google-advertenties en meten je aanvragen. Elke maand één bedrag: wat een aanvraag je kost. Vaste prijs, geen percentage over je budget.
@@ -76,7 +76,7 @@ Twee merges hebben de propositie versmald. Alles hieronder is daarop herschreven
 > SignumCore draait Google-advertenties voor Nederlandse bedrijven en meet de aanvragen die eruit komen. Elke maand één bedrag: wat een aanvraag kost. Vragen over GA4, GTM en meten welkom.
 
 **LinkedIn-tagline — 120 tekens:**
-> Adverteren in Google uitbesteden — en zien wat het oplevert. Elke maand één bedrag: wat een aanvraag je kost.
+> Wat kost een aanvraag je? Wij beheren je Google-advertenties en zetten het cijfer erbij.
 
 **Middel — 300 tekens (Pinterest, Bluesky, Mastodon, Facebook-intro):**
 > Voor de directeur die betaalt voor advertenties en niet te horen krijgt wat ze opleveren. Wij draaien je campagnes in Google en meten de aanvragen die eruit komen, op de website die je al hebt. Elke maand één bedrag: wat een aanvraag je kost. Vaste prijs, geen percentage over je budget.
@@ -137,7 +137,7 @@ Twee merges hebben de propositie versmald. Alles hieronder is daarop herschreven
 - Persoonlijk profiel Mink: cover `linkedin-persoonlijk-cover-1584x396.png`
 
 ### X
-- Naam SignumCore · @signumcore_io · Bio §3 (160) · Locatie Nederland · Website signumcore.io/webinar
+- Naam SignumCore · @SignumCoreio · Bio §3 (160) · Locatie Nederland · Website signumcore.io/webinar
 - Avatar `avatar-wit-400.png` · Header `x-header-1500x500.png`
 - Vastgezette post: de sessie
 
@@ -197,6 +197,6 @@ AI Act art. 50: profielteksten zijn door mensen vastgesteld. Zodra posts door BU
 
 - **Instagram** `signumcore_io` — eerste keus bezet door een privé-account
 - **Reddit** `SignumCoreio` — eerste én tweede keus bezet
-- **X** `signumcore_io` — `signumcore` is een beschermd account uit 2011 met nul posts
+- **X** `SignumCoreio` — `signumcore` is een beschermd account uit 2011 met nul posts; `signumcore_io` was ook bezet
 
 Reddit-avatar en -banner blijven handwerk: er is geen `input type=file` in de DOM, ook niet in shadow roots. Reddit maakt het veld pas aan bij de klik en opent direct een systeem-bestandskiezer. Uploads die wél lukken: LinkedIn, YouTube, Instagram, GitHub.

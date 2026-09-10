@@ -10,9 +10,9 @@ Kolom "Menselijk": wat alleen jij kunt (account aanmaken, e-mail/sms-verificatie
 |---|---|---|---|---|---|---|
 | A1 | LinkedIn bedrijfspagina | LIVE: https://www.linkedin.com/company/signumcore | /company/signumcore | avatar-wit-400 · linkedin-bedrijfscover-1128x191 | inloggen als Mink, pagina aanmaken, verificatie | nofollow |
 | A2 | LinkedIn servicepagina (onder A1) | Pagina → Services toevoegen | — | — | **gedaan 10 sep**: 5 diensten (Adverteren, Marketingstrategie, Digitale marketing, Zoekmachinemarketing, Zoekmachineoptimalisatie), beschrijving, prijsvorm "Contact voor prijzen" | nofollow |
-| A3 | X | https://x.com/i/flow/signup | @signumcore_io (eerste keus bezet) | avatar-wit-400 · x-header-1500x500 | account, e-mail/sms, captcha | nofollow |
+| A3 | X | LIVE: https://x.com/SignumCoreio | @SignumCoreio (eerste én tweede keus bezet) | avatar-wit-400 · x-header-1500x500 | account, e-mail/sms, captcha | nofollow |
 | A4 | Instagram (zakelijk) | LIVE: https://www.instagram.com/signumcore_io/ | @signumcore_io (eerste keus bezet) | avatar-wit-320 · instagram-post-1080x1080 | account, verificatie, omzetten naar zakelijk | nofollow |
-| A5 | Threads | via A4, threads.com | @signumcore_io | avatar-wit-320 | inloggen met Instagram | nofollow |
+| A5 | Threads | LIVE: https://www.threads.com/@signumcore_io | @signumcore_io | avatar erft van Instagram | **klaar 10 sep**: naam, monogram, bio, link naar de sessie | nofollow |
 | A6 | Facebook-pagina | https://www.facebook.com/pages/create | @signumcore | avatar-wit-500 · facebook-paginacover-1640x624 | persoonlijk account nodig, pagina aanmaken | nofollow |
 | A7 | YouTube-kanaal | LIVE: https://www.youtube.com/@signumcore | @signumcore | avatar-wit-800 · youtube-kanaalbanner-2560x1440 | Google-account, merkaccount kiezen | nofollow |
 | A8 | TikTok | https://www.tiktok.com/signup | @signumcore | avatar-wit-200 | account, verificatie; zakelijk account voor weblink | nofollow |
@@ -182,13 +182,31 @@ URL in §I loggen, afwijkende handle vastleggen, en een website-PR met de nieuwe
 | Datum | Platform | Handle/URL | Status | Dofollow gecontroleerd |
 |---|---|---|---|---|
 | 2026-09-09 | GitHub-organisatie | https://github.com/SignumCore | beschrijving, website, e-mail, locatie, monogram-avatar; vier social links (LinkedIn, YouTube, Instagram, Reddit); repo `brand` heeft social preview | nofollow |
-| 2026-09-10 | LinkedIn bedrijfspagina | https://www.linkedin.com/company/signumcore | compleet: logo, cover, tagline, overzicht, branche, 0-1 medewerkers, eigen bedrijf, opgericht 2025, 10 specialismen, Wageningen zonder straat, knop naar /wachtlijst | nofollow |
-| 2026-09-10 | YouTube | https://www.youtube.com/@signumcore | kanaal live: banner, monogram, beschrijving (949/1000), 4 links (site, wachtlijst, LinkedIn, GitHub), contact-e-mail | nofollow |
-| 2026-09-10 | Instagram | https://www.instagram.com/signumcore_io/ | account live: naam SignumCore, monogram, bio met wachtlijst-link. Handle `signumcore` bezet, tweede keus. Website-veld kan alleen in de mobiele app, daarom staat de URL in de bio | nofollow |
+| 2026-09-10 | LinkedIn bedrijfspagina | https://www.linkedin.com/company/signumcore | compleet: logo, cover, tagline, overzicht, branche, 0-1 medewerkers, eigen bedrijf, opgericht 2025, 10 specialismen, Wageningen zonder straat, knop naar de sessie | nofollow |
+| 2026-09-10 | YouTube | https://www.youtube.com/@signumcore | kanaal live: banner, monogram, beschrijving (949/1000), 4 links (site, sessie, LinkedIn, GitHub), contact-e-mail | nofollow |
+| 2026-09-10 | Instagram | https://www.instagram.com/signumcore_io/ | account live: naam SignumCore, monogram, bio met sessie-link. Handle `signumcore` bezet, tweede keus. Website-veld kan alleen in de mobiele app, daarom staat de URL in de bio | nofollow |
 | 2026-09-10 | Reddit | https://www.reddit.com/user/SignumCoreio/ | account live: displaynaam SignumCore, beschrijving, twee social links (website, LinkedIn). Handle `signumcore` en `signumcore_io` beide bezet, **derde keus**. Avatar en banner blijven handwerk, zie hieronder | nofollow |
 | 2026-09-10 | Threads | — | staat klaar op één klik: threads.com toont "Join with Instagram — signumcore_io". Die knop is tegelijk het akkoord op de voorwaarden, dus die zet Mink zelf | nofollow |
 | 2026-09-10 | X | https://x.com/SignumCoreio | account live: naam SignumCore, monogram, header, bio, locatie Nederland, wachtlijst-link. Registratie liep via telefoon (e-mailroute bestaat niet meer). **Derde keus**: `signumcore` is bezet door een beschermd account uit juni 2011, `signumcore_io` was ook niet vrij | nofollow |
 | 2026-09-10 | Facebook-pagina | — | geblokkeerd: "We noticed suspicious activity: Finish SMS verification on mobile app before creating a new page". Drie pogingen, identieke melding, ook nadat de Meta-app was geïnstalleerd: de verificatie moet ín de app worden afgerond, installeren alleen is niet genoeg. Business Suite biedt geen uitweg | — |
+
+### Wachter tegen drift — `build/check-sync.mjs`
+
+De kit is op één dag drie keer achterhaald geraakt door merges op main. Handmatig nalopen werd twee keer te laat gedaan, dus staat er nu een wachter. Draaien:
+
+```bash
+node build/check-sync.mjs
+```
+
+Hij meet drie dingen en geeft exitcode 1 bij elke afwijking, zodat hij in CI kan:
+
+1. **Elke signumcore.io-URL in de kit moet 200 geven.** Een 308 betekent dat de pagina verhuisd is; de link werkt nog, maar de kit noemt dan een deur die niet meer de deur is. Precies zo bleef `/wachtlijst` in vijf profielen staan.
+2. **Geen verboden term** uit §2 van `profiel-teksten.md` in de kit-documenten. De secties die de regels zélf beschrijven (§0, §2 en de logboeken) worden overgeslagen, anders meldt de wachter zijn eigen uitleg.
+3. **De kernzinnen in §2 moeten overeenkomen met `lib/belofte.ts` op origin/main.**
+
+Bij die derde zat de val die hem bijna waardeloos maakte: niet elke constante is een platte string. `BELOFTE_MICRO_DELEN` is een array en `WACHTLIJST_BELOFTE` een template die twee andere constanten samenvoegt. Een letterlijke vergelijking faalt daar altijd en levert een vaste rode. De wachter vergelijkt daarom alleen constanten met een enkelvoudige string-waarde op inhoud; bij samengestelde waarden controleert hij of de naam nog bestaat en verder niets.
+
+Op zijn eerste echte run ving hij meteen PR #566: vier kernzinnen waren die ochtend herschreven en drie profielen droegen nog de oude titelzin.
 
 ### Handle-afwijkingen (NAP-regel)
 

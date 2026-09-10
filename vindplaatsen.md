@@ -1,3 +1,112 @@
+# SignumCore — vindplaatsen: social, profielen, gidsen en linkpagina's
+
+Doel: overal aanwezig zijn waar dat gratis kan, voor (a) linkwaarde en merkvermeldingen, (b) ouderwetse doorklik-vindbaarheid, (c) AI-citaties. Basis: `docs/LISTINGS-DOSSIER-2026-07.md` (adres-vrij) + `docs/NAP-CITATIES-DOSSIER-2026-07.md` (wacht op adres/telefoon). Teksten en beelden: `profiel-teksten.md` en `uit/`.
+
+Kolom "Menselijk": wat alleen jij kunt (account aanmaken, e-mail/sms-verificatie, captcha, akkoord op voorwaarden). Daarna kan ik met Chrome de velden invullen en beelden uploaden. Kolom "Dofollow" is een verwachting; per gids na plaatsing controleren (dossier-regel 3). Nofollow is nog steeds nuttig voor vermeldingen en AI-citaties.
+
+## A. Social media (profiel + cover) — allemaal in één ronde
+
+| # | Platform | Aanmelden | Handle | Beelden (uit `uit/`) | Menselijk | Dofollow |
+|---|---|---|---|---|---|---|
+| A1 | LinkedIn bedrijfspagina | LIVE: https://www.linkedin.com/company/signumcore | /company/signumcore | avatar-wit-400 · linkedin-bedrijfscover-1128x191 | inloggen als Mink, pagina aanmaken, verificatie | nofollow |
+| A2 | LinkedIn servicepagina (onder A1) | Pagina → Services toevoegen | — | — | **gedaan 10 sep**: 5 diensten (Adverteren, Marketingstrategie, Digitale marketing, Zoekmachinemarketing, Zoekmachineoptimalisatie), beschrijving, prijsvorm "Contact voor prijzen" | nofollow |
+| A3 | X | https://x.com/i/flow/signup | @signumcore_io (eerste keus bezet) | avatar-wit-400 · x-header-1500x500 | account, e-mail/sms, captcha | nofollow |
+| A4 | Instagram (zakelijk) | LIVE: https://www.instagram.com/signumcore_io/ | @signumcore_io (eerste keus bezet) | avatar-wit-320 · instagram-post-1080x1080 | account, verificatie, omzetten naar zakelijk | nofollow |
+| A5 | Threads | via A4, threads.com | @signumcore_io | avatar-wit-320 | inloggen met Instagram | nofollow |
+| A6 | Facebook-pagina | https://www.facebook.com/pages/create | @signumcore | avatar-wit-500 · facebook-paginacover-1640x624 | persoonlijk account nodig, pagina aanmaken | nofollow |
+| A7 | YouTube-kanaal | LIVE: https://www.youtube.com/@signumcore | @signumcore | avatar-wit-800 · youtube-kanaalbanner-2560x1440 | Google-account, merkaccount kiezen | nofollow |
+| A8 | TikTok | https://www.tiktok.com/signup | @signumcore | avatar-wit-200 | account, verificatie; zakelijk account voor weblink | nofollow |
+| A9 | Pinterest (zakelijk) | https://www.pinterest.com/business/create/ | @signumcore | avatar-wit-400 | account; site claimen via metatag (website-PR) | nofollow |
+| A10 | Bluesky | https://bsky.app | @signumcore.io (domein als handle) | avatar-wit-1024 · bluesky-mastodon-banner-1500x500 | account; daarna DNS TXT `_atproto` op Vercel DNS | nofollow |
+| A11 | Mastodon | https://mastodon.social/auth/sign_up (of mastodon.nl) | @signumcore | avatar-wit-400 · bluesky-mastodon-banner-1500x500 | account, e-mailverificatie | rel=me-verificatie: vinkje bij website (website-PR) |
+| A12 | Reddit | LIVE: https://www.reddit.com/user/SignumCoreio/ | u/SignumCoreio (eerste én tweede keus bezet) | avatar-wit-256 · reddit-profielbanner-1920x384 | account, e-mail; eventueel r/signumcore (reddit-communitybanner-4000x256) | nofollow |
+
+Regels: (1) overal `signumcore`; is dat bezet, dan `signumcore_io`, daarna `signumcoreio`, en dat noteren in de log onderaan. (2) Op elk profiel de site-URL en waar het kan e-mail. (3) Eerste post per platform staat in `profiel-teksten.md` §6.
+
+## B. Ontwikkelaars- en techprofielen
+
+| # | Platform | Aanmelden | Wat | Menselijk | Dofollow |
+|---|---|---|---|---|---|
+| B1 | GitHub-organisatie | https://github.com/SignumCore (bestaat, jij bent admin) | beschrijving/website/e-mail/locatie: gezet via gh; profiel-README-repo `.github` en repo `brand`: via gh | avatar uploaden: Settings → Profile → Upload (`avatar-wit-500.png`); social preview per repo (`github-social-preview-1280x640.png`) | nofollow |
+| B2 | Dev.to | https://dev.to/enter?state=new-user | organisatieprofiel + syndicatie van blogartikelen met `canonical_url` naar signumcore.io | account (via GitHub) | nofollow, canonical telt |
+| B3 | Medium | https://medium.com/m/signin | publicatie "SignumCore" + import van blog met canonical | account | nofollow, canonical telt |
+| B4 | Hashnode | https://hashnode.com/onboard | blog op subdomein; `@signumcore` gaf HTTP 200 (controleren of bezet) | account | canonical |
+| B5 | StackShare | https://stackshare.io/signup | bedrijfsstack (Next.js, Vercel, Postgres, GTM, GA4) | account | verifiëren |
+| B6 | Hacker News | https://news.ycombinator.com/login | profiel met `about` + URL; later "Show HN" voor een tool | account | nofollow |
+| B7 | Indie Hackers | https://www.indiehackers.com/sign-up | productprofiel | account | nofollow |
+| B8 | Gravatar | https://gravatar.com | avatar + profiel aan info@signumcore.io (geverifieerde links) | account (WordPress.com) | verifiëren |
+| B9 | About.me | https://about.me/signup | profielpagina met link | account | nofollow |
+
+## C. SaaS- en productgidsen — routes nagemeten op 10 sep 2026
+
+De URL's uit het juli-dossier zijn deels verlopen. Hieronder staat wat er op 10 september werkelijk opende, gemeten in een echte browser. Een 403 bij `curl` is meestal een botblokkade en geen dode pagina; die zijn per regel apart nagekeken.
+
+| # | Gids | Werkende route | Wat het vraagt | Waarde |
+|---|---|---|---|---|
+| C1 | Product Hunt | https://www.producthunt.com | account; eerst maker-profiel en productpagina, nog niet lanceren | dofollow bij feature |
+| C2 | **Capterra + GetApp + Software Advice** | https://app.g2digitalmarkets.com/get-listed/start | kort formulier: zakelijk e-mailadres, productnaam, product-URL. **Eén aanvraag dekt alle drie** — Gartner Digital Markets loopt nu via G2. De oude `capterra.com/vendors/sign-up` geeft 404 | hoogste van de lijst |
+| C3 | G2 (reviews) | https://www.g2.com, via "For Vendors" | account op bedrijfsdomein | profiel-elementen dofollow |
+| C4 | SaaSworthy | https://www.saasworthy.com, via "List your product" | formulier | verifiëren na plaatsing |
+| C5 | SaaSHub | https://www.saashub.com/submit | gratis, vraagt Register of Login. De dossier-URL `/submit-service` geeft 404 | verifiëren |
+| C6 | AlternativeTo | via "Sign In" en dan een nieuw item; `alternativeto.net/manage/new-item/` geeft **404** | account | nofollow |
+| C7 | Crozdesk | https://vendor.crozdesk.com/ | vendor-account | verifiëren |
+| C8 | BetaList | https://betalist.com/submit | account; wachtrij of betaald versnellen | dofollow |
+| C9 | Crunchbase | https://www.crunchbase.com/add-new leidt naar inloggen | account verplicht vóór een profiel | nofollow, hoge autoriteit |
+| C10 | Wellfound | https://wellfound.com/company/new | account | nofollow |
+| C11 | F6S | https://www.f6s.com/ | account | nofollow |
+| C12 | Techleap Finder (NL) | https://finder.techleap.nl | opent; claim via het formulier | NL-relevant |
+| C13 | Appwiki.nl | https://appwiki.nl | leveranciersaanmelding | NL-relevant |
+| C14 | ~~Softwarevergelijken.nl~~ | **site ligt eruit**: "Deze website is tijdelijk in onderhoud" | — | overslaan tot hij terug is |
+| C15 | Trustpilot (gratis profiel) | https://business.trustpilot.com | account, domeinverificatie | nofollow |
+
+### Klaar om te plakken — C2, de hoogste waarde
+
+Op https://app.g2digitalmarkets.com/get-listed/start:
+
+- Business Email: `info@signumcore.io`
+- Product Name: `SignumCore`
+- Product Website: `https://signumcore.io`
+- Laat het vinkje "I want to be contacted to learn about brand building and lead generation" **uit**: dat is een verkoopgesprek, geen vermelding.
+
+Beschrijving en categorie volgen in een tweede stap. Gebruik `profiel-teksten.md` §4 (EN) en de categorie Marketing Analytics of PPC.
+
+## D. Bureaugidsen (past bij KVK-activiteit 73110 en "adverteren uitbesteden")
+
+| # | Gids | Aanmelden | Menselijk | Dofollow |
+|---|---|---|---|---|
+| D1 | Sortlist (NL/EU) | https://www.sortlist.nl/agency/signup | account; profiel wordt gescreend | nofollow |
+| D2 | Clutch | https://clutch.co/get-listed | account; reviews via klanten | nofollow |
+| D3 | GoodFirms | https://www.goodfirms.co/get-listed | account | verifiëren |
+| D4 | DesignRush | https://www.designrush.com/agency/register | account | verifiëren |
+
+## E. Ouderwetse linkpagina's en NL-gidsen zonder adres
+
+| # | Plek | Hoe | Opmerking |
+|---|---|---|---|
+| E1 | Startpagina-dochters | zoek de dochterpagina's "google-ads", "adverteren", "online-marketing", "webdesign" op startpagina.nl; "link aanmelden" per pagina | gratis, wachttijd, dofollow wisselt |
+| E2 | Jouwpagina.nl / Uwpagina.nl-familie | zelfde werkwijze | controleren of nog actief |
+| E3 | Bedrijvenpagina.nl | https://www.bedrijvenpagina.nl | vraagt meestal plaats, niet altijd straat |
+| E4 | Quora (NL-vragen over Google Ads) | profiel met link; antwoorden, geen spam | nofollow, doorklik |
+
+## F. Geparkeerd tot adres + telefoon bestaan (NAP-dossier)
+
+Google Bedrijfsprofiel (voor dit bedrijf niet beschikbaar zonder bezoekadres; servicegebied-variant alleen bij echte klantbezoeken), Bing Places, Apple Business Connect, Telefoonboek.nl, Openingstijden.nl, Cylex, Hotfrog, Yelp, Foursquare, Kiyoh/Klantenvertellen (betaald). Niets hiervan met een halve NAP aanmaken: een inconsistent adres of telefoonnummer vergiftigt alle vermeldingen.
+
+## G. On-site (website-PR, doe ik)
+
+1. ~~`lib/schema.ts` → `sameAs`~~ **klaar**: LinkedIn, YouTube, Instagram, Reddit, GitHub en de oprichter staan live op prod (PR #563, gemerged 10 sep).
+2. Footer: `rel="me"`-links naar Mastodon — wacht tot dat account bestaat.
+3. Pinterest-metatag en domeinverificaties (Bluesky via DNS `_atproto`) — wacht op die accounts.
+4. **Open besluit voor Mink.** `schema.logo` wijst nog naar `https://signumcore.io/logo-512.png`: het oude teal-logo van 87 kB. Dát bestand trekken gidsen en AI-assistenten. Het monogram staat sinds PR #563 live op `https://signumcore.io/brand/signumcore-monogram-512.png` (14 kB). De wissel is een merkkeuze, dus niet eigenmachtig gedaan.
+5. **Open punt.** `llms.txt` sluit af met "Laatste update: augustus 2026" terwijl de inhoud op 10 september is herschreven. Dat bestand is precies wat AI-assistenten citeren.
+
+## H. Volgorde
+
+1. **Vandaag (jij, menselijk):** A1, A3, A4/A5, A6, A7, A12, B1-avatar. Alles met `signumcore`.
+2. **Daarna (ik, Chrome):** velden vullen, beelden uploaden, eerste post plaatsen, URL's loggen.
+3. **Week 1–3 (2 à 3 per week):** C1 (profiel, geen launch), C2, C3, C9, B2, B8; dan C4–C8, D1, C12–C15.
+4. **Na elke ronde:** website-PR met nieuwe `sameAs`-URL's.
+
 ## I. Log
 
 **10 sep, tweede helft — propositie versmald.** Twee merges op signum-website hebben alles wat hieronder staat veranderd: #565 haalde de bureau-wereld van de site (45 pagina's, 308 naar de home) en #564 verving de wachtlijst door `/webinar`. Alle profielen zijn daarop herschreven. Zie `profiel-teksten.md` §0.

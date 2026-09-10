@@ -16,10 +16,10 @@ mkdirSync(UIT, { recursive: true })
 mkdirSync(HTML, { recursive: true })
 
 // ── Merkconstanten (bron: lib/belofte.ts, lib/brand.ts, globals.css) ──
-const KOP = 'Alles voor je aanvragen in één systeem.'
-const ACCENT = 'Je ziet wat het oplevert.'
-const SUB = 'Wij draaien je advertenties, meten je aanvragen en sturen bij.'
-const TAGS = ['JE ADVERTENTIES', 'DE METING', 'JE CIJFER', 'GRATIS TOOLS']
+const KOP = 'Ben jij de baas over jouw bedrijf?'
+const ACCENT = 'Dan wil je weten wat een aanvraag je kost.'
+const SUB = 'Eén bedrag per maand. Niets verandert zonder jouw akkoord.'
+const TAGS = ['JE ADVERTENTIES', 'JE AANVRAGEN', 'JOUW AKKOORD', 'ÉÉN BEDRAG']
 const VOET = 'signumcore.io/webinar · vaste prijs · geen percentage over je budget'
 // Tweede galerijbeeld sinds 10 sep: de sleutel, niet de bureau-wereld (#565).
 const SLEUTEL_KOP = 'Niets verandert'
@@ -191,6 +191,8 @@ const SPECS = [
   { naam: 'linkedin-persoonlijk-cover-1584x396', w: 1584, h: 396, html: band({ w: 1584, h: 396, safe: { left: 400, right: 40 }, label: '// oprichter' }) },
   { naam: 'x-header-1500x500', w: 1500, h: 500, html: band({ w: 1500, h: 500, safe: { left: 60, right: 60, bottom: 130 } }) },
   { naam: 'bluesky-mastodon-banner-1500x500', w: 1500, h: 500, html: band({ w: 1500, h: 500, safe: { left: 60, right: 60, bottom: 130 } }) },
+  // Oud Reddit eist voor de profielheader 10:3 en minimaal 640x192.
+  { naam: 'reddit-header-1280x384', w: 1280, h: 384, html: band({ w: 1280, h: 384, safe: { left: 60, right: 60 } }) },
   { naam: 'reddit-profielbanner-1920x384', w: 1920, h: 384, html: band({ w: 1920, h: 384, safe: { left: 360, right: 60 } }) },
   { naam: 'reddit-communitybanner-4000x256', w: 4000, h: 256, html: band({ w: 4000, h: 256, safe: { left: 1000, right: 1000 }, compact: true }) },
 ]

@@ -13,13 +13,13 @@ Kolom "Menselijk": wat alleen jij kunt (account aanmaken, e-mail/sms-verificatie
 | A3 | X | LIVE: https://x.com/SignumCoreio | @SignumCoreio (eerste én tweede keus bezet) | avatar-wit-400 · x-header-1500x500 | account, e-mail/sms, captcha | nofollow |
 | A4 | Instagram (zakelijk) | LIVE: https://www.instagram.com/signumcore_io/ | @signumcore_io (eerste keus bezet) | avatar-wit-320 · instagram-post-1080x1080 | account, verificatie, omzetten naar zakelijk | nofollow |
 | A5 | Threads | LIVE: https://www.threads.com/@signumcore_io | @signumcore_io | avatar erft van Instagram | **klaar 10 sep**: naam, monogram, bio, link naar de sessie | nofollow |
-| A6 | Facebook-pagina | https://www.facebook.com/pages/create | @signumcore | avatar-wit-500 · facebook-paginacover-1640x624 | persoonlijk account nodig, pagina aanmaken | nofollow |
+| A6 | Facebook-pagina | LIVE: https://www.facebook.com/profile.php?id=61594027991854 | numerieke id, gebruikersnaam nog te claimen | avatar-wit-500 · facebook-paginacover-1640x624 | **klaar 10 sep**: naam, categorie Marketingbureau, bio, website, e-mail, foto, omslag | nofollow |
 | A7 | YouTube-kanaal | LIVE: https://www.youtube.com/@signumcore | @signumcore | avatar-wit-800 · youtube-kanaalbanner-2560x1440 | Google-account, merkaccount kiezen | nofollow |
 | A8 | TikTok | https://www.tiktok.com/signup | @signumcore | avatar-wit-200 | account, verificatie; zakelijk account voor weblink | nofollow |
 | A9 | Pinterest (zakelijk) | https://www.pinterest.com/business/create/ | @signumcore | avatar-wit-400 | account; site claimen via metatag (website-PR) | nofollow |
 | A10 | Bluesky | https://bsky.app | @signumcore.io (domein als handle) | avatar-wit-1024 · bluesky-mastodon-banner-1500x500 | account; daarna DNS TXT `_atproto` op Vercel DNS | nofollow |
 | A11 | Mastodon | https://mastodon.social/auth/sign_up (of mastodon.nl) | @signumcore | avatar-wit-400 · bluesky-mastodon-banner-1500x500 | account, e-mailverificatie | rel=me-verificatie: vinkje bij website (website-PR) |
-| A12 | Reddit | LIVE: https://www.reddit.com/user/SignumCoreio/ | u/SignumCoreio (eerste én tweede keus bezet) | avatar-wit-256 · reddit-profielbanner-1920x384 | account, e-mail; eventueel r/signumcore (reddit-communitybanner-4000x256) | nofollow |
+| A12 | Reddit | LIVE: https://www.reddit.com/user/SignumCoreio/ | u/SignumCoreio (eerste én tweede keus bezet) | avatar-wit-256 · reddit-header-1280x384 (10:3, max 500 KB) | account, e-mail; eventueel r/signumcore (reddit-communitybanner-4000x256) | nofollow |
 
 Regels: (1) overal `signumcore`; is dat bezet, dan `signumcore_io`, daarna `signumcoreio`, en dat noteren in de log onderaan. (2) Op elk profiel de site-URL en waar het kan e-mail. (3) Eerste post per platform staat in `profiel-teksten.md` §6.
 
@@ -155,13 +155,18 @@ URL in §I loggen, afwijkende handle vastleggen, en een website-PR met de nieuwe
 | 2026-09-10 | X | in aanvraag | SMS-code + naam + handle resteren; handle wordt `signumcore_io` (`signumcore` is een beschermd account uit 2011) | — |
 | 2026-09-10 | Threads | — | één klik via threads.com ("Join with Instagram — signumcore_io"); die knop is het akkoord op de voorwaarden, dus die zet Mink zelf | — |
 | 2026-09-10 | Facebook-pagina | — | **geblokkeerd**: "We noticed suspicious activity — Finish SMS verification on mobile app before creating a new page." Vier pogingen, ook na installatie van de Meta-app. Formulier stond compleet (naam, categorie Marketingbureau, bio). Mink: SMS-verificatie ín de app afronden | — |
+| 2026-09-10 | Facebook-pagina | https://www.facebook.com/profile.php?id=61594027991854 | pagina live nadat Mink de sms-verificatie in de Meta-app had afgerond. Naam SignumCore, categorie Marketingbureau, bio, website naar de sessie, e-mail, monogram, omslag met de nieuwe titelzin | nofollow |
+| 2026-09-10 | X | https://x.com/SignumCoreio | header vervangen door de opnieuw gerenderde `x-header-1500x500.png` met de titelzin uit PR #566 | nofollow |
+| 2026-09-10 | YouTube | https://www.youtube.com/@signumcore | kanaalbanner vervangen door de opnieuw gerenderde 2560x1440 met de titelzin uit PR #566 | nofollow |
+| 2026-09-10 | LinkedIn | https://www.linkedin.com/company/signumcore | coverafbeelding bijgewerkt. De slogan is **niet** aangepast: een tweede sessie zat op datzelfde moment in dezelfde velden en LinkedIn gaf "Een andere beheerder van deze pagina probeert gelijktijdig wijzigingen te maken" | nofollow |
+| 2026-09-10 | Reddit | https://www.reddit.com/user/SignumCoreio/ | avatar en banner staan er nu op. Route: zie hieronder | nofollow |
 
 ### Herhaalde pogingen op 10 sep (avond)
 
 - **Facebook** — vijfde poging, formulier compleet, zelfde blokkade: "We noticed suspicious activity — Finish SMS verification on mobile app before creating a new page." Er is geen omweg via Business Suite. Wacht op Minks SMS-verificatie in de Meta-app.
 - **X** — `x.com/signumcore_io` geeft "This account doesn't exist": de registratie is niet afgerond. Wacht op de SMS-code.
 - **Threads** — `threads.com/@signumcore_io` leidt naar de aanmeldpagina. De knop "Use your Instagram account" is tegelijk het akkoord op de voorwaarden; die zet Mink.
-- **Reddit avatar en banner** — nu preciezer gemeten dan eerder: het `input[type=file]` bestáát wél (accept `image/x-png,image/jpeg,image/png`), maar pas nadat de Banner-dialoog geopend is, en het staat niet in de toegankelijkheidsboom. `find` vindt het daardoor niet en `file_upload` kan er geen ref voor krijgen. Blijft handwerk.
+- **Reddit avatar en banner** — nu preciezer gemeten dan eerder: het `input[type=file]` bestáát wél (accept `image/x-png,image/jpeg,image/png`), maar pas nadat de Banner-dialoog geopend is, en het staat in de shadow root van `<settings-dropzone>`, die de toegankelijkheidsboom niet in loopt. `find` vindt het daardoor niet en `file_upload` kan er geen ref voor krijgen. **Opgelost in de ronde erna**, zie "Wat een bestandskiezer blokkeert".
 
 ### Twee dingen op de site zelf die hierop wachten
 
@@ -185,7 +190,7 @@ URL in §I loggen, afwijkende handle vastleggen, en een website-PR met de nieuwe
 | 2026-09-10 | LinkedIn bedrijfspagina | https://www.linkedin.com/company/signumcore | compleet: logo, cover, tagline, overzicht, branche, 0-1 medewerkers, eigen bedrijf, opgericht 2025, 10 specialismen, Wageningen zonder straat, knop naar de sessie | nofollow |
 | 2026-09-10 | YouTube | https://www.youtube.com/@signumcore | kanaal live: banner, monogram, beschrijving (949/1000), 4 links (site, sessie, LinkedIn, GitHub), contact-e-mail | nofollow |
 | 2026-09-10 | Instagram | https://www.instagram.com/signumcore_io/ | account live: naam SignumCore, monogram, bio met sessie-link. Handle `signumcore` bezet, tweede keus. Website-veld kan alleen in de mobiele app, daarom staat de URL in de bio | nofollow |
-| 2026-09-10 | Reddit | https://www.reddit.com/user/SignumCoreio/ | account live: displaynaam SignumCore, beschrijving, twee social links (website, LinkedIn). Handle `signumcore` en `signumcore_io` beide bezet, **derde keus**. Avatar en banner blijven handwerk, zie hieronder | nofollow |
+| 2026-09-10 | Reddit | https://www.reddit.com/user/SignumCoreio/ | account live: displaynaam SignumCore, beschrijving, twee social links (website, LinkedIn). Handle `signumcore` en `signumcore_io` beide bezet, **derde keus**. avatar en banner staan er sinds deze ronde ook op, zie "Wat een bestandskiezer blokkeert" | nofollow |
 | 2026-09-10 | Threads | — | staat klaar op één klik: threads.com toont "Join with Instagram — signumcore_io". Die knop is tegelijk het akkoord op de voorwaarden, dus die zet Mink zelf | nofollow |
 | 2026-09-10 | X | https://x.com/SignumCoreio | account live: naam SignumCore, monogram, header, bio, locatie Nederland, wachtlijst-link. Registratie liep via telefoon (e-mailroute bestaat niet meer). **Derde keus**: `signumcore` is bezet door een beschermd account uit juni 2011, `signumcore_io` was ook niet vrij | nofollow |
 | 2026-09-10 | Facebook-pagina | — | geblokkeerd: "We noticed suspicious activity: Finish SMS verification on mobile app before creating a new page". Drie pogingen, identieke melding, ook nadat de Meta-app was geïnstalleerd: de verificatie moet ín de app worden afgerond, installeren alleen is niet genoeg. Business Suite biedt geen uitweg | — |
@@ -224,4 +229,43 @@ De org-instellingen bieden precies vier velden voor social links; die zitten vol
 
 ### Wat een bestandskiezer blokkeert
 
-Reddit (avatar, banner) heeft **geen** `input type=file` in de DOM, ook niet in shadow roots — gemeten met een recursieve `querySelectorAll`-walk over alle shadowRoots, resultaat lege lijst. Reddit maakt het veld pas aan bij de klik en opent direct een systeem-bestandskiezer. Die twee blijven dus handwerk. Uploads die wél lukken via een bereikbaar veld: LinkedIn (logo, cover), YouTube (banner, foto), Instagram (avatar), GitHub (org-avatar, repo social preview).
+De vorige meting hier was fout en stond een ronde lang verkeerd in dit bestand. De conclusie luidde dat Reddit geen `input type=file` in de DOM heeft. Dat kwam doordat de shadow-walk liep terwijl het dialoogvenster nog dicht was. Reddit maakt het veld pas aan bij het openen van het dialoogvenster.
+
+Wat er werkelijk aan de hand is, en hoe het wél lukt:
+
+**Nieuw Reddit — profielbanner.** `reddit.com/settings/profile` → rij "Banner" → klik de knop met `aria-label="Open modal to change setting: Banner"`. Niet de rij zelf: die is een `<label>` zonder eigen handler. Pas ná het openen bestaat er een `input[type=file]`, en die zit in de shadow root van `<settings-dropzone>`. De toegankelijkheidsboom van de browsertools loopt die shadow root niet in, dus `find` en `read_page` zien het veld nooit en `file_upload` kan er geen ref voor krijgen. Zichtbaar maken helpt niet — de boom blijft hem overslaan.
+
+Wat wel werkt is het veld één stap naar de lichte DOM verplaatsen, vullen, en terugzetten:
+
+1. Loop met een recursieve `querySelectorAll` over alle shadowRoots en pak het `input[type=file]`.
+2. Bewaar `parentNode` en `nextSibling`, hang het veld aan `document.body` en geef het een `aria-label`.
+3. `find` vindt het nu wel; `file_upload` met die ref zet het bestand erin.
+4. Zet het veld terug op zijn oude plek en vuur zelf `input` en `change` af, allebei met `bubbles: true` en `composed: true`. Zonder `composed` komt de gebeurtenis de shadow-grens niet over.
+5. Het dialoogvenster toont de voorbeeldweergave. Daarna Opslaan.
+
+Eisen van dat dialoogvenster: JPG of PNG, maximaal 500 KB. `reddit-header-1280x384.png` (10:3, 34 KB) past; de bredere `reddit-profielbanner-1920x384.png` is 5:1 en wordt bijgesneden.
+
+**Oud Reddit — avatar.** `old.reddit.com/user/<naam>/about/edit` heeft drie formulieren met een gewoon zichtbaar bestandsveld: `image-upload` (kopafbeelding, `header=1`), `icon-upload` (`upload_type=icon`) en `banner-upload` (`upload_type=banner`). De "upload"-knoppen blijven `disabled` omdat oud Reddit ze pas vrijgeeft na een vertrouwde `change`. Die knop is niet nodig: het formulier post gewoon multipart naar `/api/upload_sr_img`. Vul het veld met `file_upload` en verstuur het formulier zelf:
+
+```js
+const f = document.getElementById('icon-upload')
+const fd = new FormData(f); fd.delete('upload')
+const r = await fetch('/api/upload_sr_img', { method: 'POST', body: fd, credentials: 'same-origin' })
+```
+
+Antwoord `completedUploadImage('saved', '<url>')` betekent gelukt.
+
+Twee dingen om te weten bij deze route:
+
+- Alleen `icon-upload` zette de avatar die nieuw Reddit toont. `banner-upload` schrijft `banner_img` op het gebruikers-subreddit, en dát veld leest nieuw Reddit **niet** voor de profielbanner. Controleer met `r/u_<naam>/about.json`: `icon_img` gevuld is goed, `banner_img` gevuld zegt niets over wat bezoekers zien. De profielbanner loopt via het dialoogvenster hierboven.
+- Slechts twee van de drie bestandsvelden komen in de toegankelijkheidsboom. Om een bestand in het derde te krijgen: upload het in een veld dat wél een ref heeft, en verplaats het `File`-object met een `DataTransfer` naar het juiste veld.
+
+**Losse regel over `javascript_tool`.** De uitvoer wordt geweigerd zodra er iets in zit dat op een sleutel of een querystring lijkt. Oud Reddit zet een modhash in elk formulier, dus `outerHTML` teruggeven van zo'n formulier levert `[BLOCKED: Cookie/query string data]` op en je ziet niets. Geef alleen samengevatte velden terug, en strip het antwoord van een upload voordat je het leest.
+
+Uploads die via een gewoon bereikbaar veld lukken: LinkedIn (logo, cover), YouTube (banner, foto), Instagram (avatar), Facebook (foto, omslag), X (avatar, header), GitHub (org-avatar, repo social preview).
+
+### Twee sessies in dezelfde velden
+
+LinkedIn weigert gelijktijdige bewerkingen met "Een andere beheerder van deze pagina probeert gelijktijdig wijzigingen te maken". Dat gebeurde bij de slogan: opslaan mislukte, de knop werd "Opnieuw proberen", en in het veld stond een zin die deze sessie nooit had getypt. Dat is het bewijs dat er een tweede sessie in dezelfde pagina zat.
+
+Regel: stop met bewerken zodra je een tekst ziet die je zelf niet hebt ingevuld. Doorduwen overschrijft het werk van de andere sessie zonder waarschuwing, en LinkedIn houdt geen versies bij. Ditzelfde geldt voor `profiel-teksten.md`: dat bestand is deze ronde door een parallelle sessie bijgewerkt naar de nieuwe titelzin.

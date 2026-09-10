@@ -98,3 +98,5 @@ Google Bedrijfsprofiel (voor dit bedrijf niet beschikbaar zonder bezoekadres; se
 | Datum | Platform | Handle/URL | Status | Dofollow gecontroleerd |
 |---|---|---|---|---|
 | 2026-09-09 | GitHub-organisatie | https://github.com/SignumCore | beschrijving, website, e-mail, locatie gezet via gh; avatar nog uploaden | nofollow |
+| 2026-09-10 | LinkedIn bedrijfspagina | https://www.linkedin.com/company/signumcore | compleet: logo, cover, tagline, overzicht, branche, 0-1, eigen bedrijf, 2025, 10 specialismen, Wageningen (zonder straat) | nofollow |
+| 2026-09-10 | GitHub-organisatie | https://github.com/SignumCore | avatar geüpload (monogram) | nofollow |

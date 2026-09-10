@@ -18,7 +18,7 @@ mkdirSync(HTML, { recursive: true })
 // ── Merkconstanten (bron: lib/belofte.ts, lib/brand.ts, globals.css) ──
 const KOP = 'Alles voor je aanvragen in één systeem.'
 const ACCENT = 'Je ziet wat het oplevert.'
-const SUB = 'Wij draaien je advertenties, meten elke aanvraag en sturen bij.'
+const SUB = 'Wij draaien je advertenties, meten je aanvragen en sturen bij.'
 const TAGS = ['JE ADVERTENTIES', 'DE METING', 'JE CIJFER', 'GRATIS TOOLS']
 const VOET = 'signumcore.io · vaste prijs · maandelijks opzegbaar'
 const BUREAU_KOP = 'Tracking voor al je klanten:'
@@ -178,7 +178,7 @@ const SPECS = [
   { naam: 'og-linkvoorbeeld-1200x630', w: 1200, h: 630, html: kaart({ w: 1200, h: 630 }) },
   { naam: 'github-social-preview-1280x640', w: 1280, h: 640, html: kaart({ w: 1280, h: 640, label: '// github.com/SignumCore' }) },
   { naam: 'producthunt-galerij-1270x760', w: 1270, h: 760, html: kaart({ w: 1270, h: 760 }) },
-  { naam: 'producthunt-galerij-bureaus-1270x760', w: 1270, h: 760, html: kaart({ w: 1270, h: 760, kop: BUREAU_KOP, accent: BUREAU_ACCENT, sub: BUREAU_SUB, tags: BUREAU_TAGS, label: '// voor marketingbureaus', voet: 'signumcore.io/voor-bureaus · white-label · maandelijks opzegbaar' }) },
+  { naam: 'producthunt-galerij-bureaus-1270x760', w: 1270, h: 760, html: kaart({ w: 1270, h: 760, kop: BUREAU_KOP, accent: BUREAU_ACCENT, sub: BUREAU_SUB, tags: BUREAU_TAGS, label: '// voor marketingbureaus', voet: 'signumcore.io/voor-bureaus · GTM · GA4 · Consent Mode v2' }) },
   { naam: 'instagram-post-1080x1080', w: 1080, h: 1080, html: kaart({ w: 1080, h: 1080, maxChars: 15 }) },
   { naam: 'instagram-story-1080x1920', w: 1080, h: 1920, html: kaart({ w: 1080, h: 1920, safe: { top: 250, bottom: 250 }, maxChars: 15, voet: 'signumcore.io<br>vaste prijs · maandelijks opzegbaar' }) },
   // Facebook: desktop toont alles, mobiel snijdt zijkanten af tot ~1109px breed; profielfoto overlapt linksonder.

@@ -112,12 +112,34 @@ Google Bedrijfsprofiel (voor dit bedrijf niet beschikbaar zonder bezoekadres; se
 4. **Open besluit voor Mink.** `schema.logo` wijst nog naar `https://signumcore.io/logo-512.png`: het oude teal-logo van 87 kB. Dát bestand trekken gidsen en AI-assistenten. Het monogram staat sinds PR #563 live op `https://signumcore.io/brand/signumcore-monogram-512.png` (14 kB). De wissel is een merkkeuze, dus niet eigenmachtig gedaan.
 5. **Open punt.** `llms.txt` sluit af met "Laatste update: augustus 2026" terwijl de inhoud op 10 september is herschreven. Dat bestand is precies wat AI-assistenten citeren.
 
-## H. Volgorde
+## H. Volgorde — bijgewerkt 10 sep 2026
 
-1. **Vandaag (jij, menselijk):** A1, A3, A4/A5, A6, A7, A12, B1-avatar. Alles met `signumcore`.
-2. **Daarna (ik, Chrome):** velden vullen, beelden uploaden, eerste post plaatsen, URL's loggen.
-3. **Week 1–3 (2 à 3 per week):** C1 (profiel, geen launch), C2, C3, C9, B2, B8; dan C4–C8, D1, C12–C15.
-4. **Na elke ronde:** website-PR met nieuwe `sameAs`-URL's.
+Wat af is staat in §I. Dit is wat er nog ligt, op volgorde van waarde.
+
+**1. Vier muren, alleen jij kunt erdoor**
+
+| Wat | Waarom het vastzit | Wat jij doet |
+|---|---|---|
+| Facebook-pagina | "Finish SMS verification on mobile app" — vijf pogingen, geen omweg | SMS-verificatie ín de Meta-app afronden, dan zeg ik het en vul ik de pagina |
+| X `signumcore_io` | registratie niet afgerond; alleen telefoon, Google of Apple | code invoeren, handle `signumcore_io` |
+| Threads | de koppelknop is tegelijk het akkoord op de voorwaarden | één klik op threads.com |
+| Reddit-avatar en -banner | het bestandsveld verschijnt pas ná de dialoog en staat niet in de toegankelijkheidsboom | twee uploads uit `uit/` |
+
+**2. Hoogste waarde die vandaag kan (kort formulier, geen account vooraf)**
+
+C2 — G2 Digital Markets. Eén aanvraag dekt Capterra, GetApp én Software Advice. De drie velden staan klaar in §C.
+
+**3. Daarna, twee à drie per week**
+
+C1 Product Hunt (maker-profiel, nog niet lanceren) · C9 Crunchbase · B2 Dev.to (via GitHub) · B8 Gravatar · C3 G2-reviews · C8 BetaList · D2 Clutch · D3 GoodFirms · C12 Techleap · C13 Appwiki.
+
+**4. Overslaan tot ze weer werken**
+
+C14 Softwarevergelijken.nl (site ligt eruit) · E1 Startpagina (geen aanmeldroute meer) · C6 AlternativeTo en C5 SaaSHub (alleen via inloggen, lage waarde).
+
+**5. Na elke ronde**
+
+URL in §I loggen, afwijkende handle vastleggen, en een website-PR met de nieuwe `sameAs`-URL's.
 
 ## I. Log
 

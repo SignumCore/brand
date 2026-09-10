@@ -9,7 +9,7 @@ Kolom "Menselijk": wat alleen jij kunt (account aanmaken, e-mail/sms-verificatie
 | # | Platform | Aanmelden | Handle | Beelden (uit `uit/`) | Menselijk | Dofollow |
 |---|---|---|---|---|---|---|
 | A1 | LinkedIn bedrijfspagina | https://www.linkedin.com/company/setup/new/ | /company/signumcore | avatar-wit-400 · linkedin-bedrijfscover-1128x191 | inloggen als Mink, pagina aanmaken, verificatie | nofollow |
-| A2 | LinkedIn productpagina (onder A1) | Pagina → Producten → Product toevoegen | — | avatar-wit-400 · producthunt-galerij-1270x760 | goedkeuring LinkedIn (dagen) | nofollow |
+| A2 | LinkedIn servicepagina (onder A1) | Pagina → Services toevoegen | — | — | **gedaan 10 sep**: 5 diensten (Adverteren, Marketingstrategie, Digitale marketing, Zoekmachinemarketing, Zoekmachineoptimalisatie), beschrijving, prijsvorm "Contact voor prijzen" | nofollow |
 | A3 | X | https://x.com/i/flow/signup | @signumcore | avatar-wit-400 · x-header-1500x500 | account, e-mail/sms, captcha | nofollow |
 | A4 | Instagram (zakelijk) | https://www.instagram.com/accounts/emailsignup/ | @signumcore | avatar-wit-320 · instagram-post-1080x1080 | account, verificatie, omzetten naar zakelijk | nofollow |
 | A5 | Threads | via A4 (app of threads.net) | @signumcore | avatar-wit-320 | inloggen met Instagram | nofollow |
@@ -97,6 +97,29 @@ Google Bedrijfsprofiel (voor dit bedrijf niet beschikbaar zonder bezoekadres; se
 
 | Datum | Platform | Handle/URL | Status | Dofollow gecontroleerd |
 |---|---|---|---|---|
-| 2026-09-09 | GitHub-organisatie | https://github.com/SignumCore | beschrijving, website, e-mail, locatie gezet via gh; avatar nog uploaden | nofollow |
-| 2026-09-10 | LinkedIn bedrijfspagina | https://www.linkedin.com/company/signumcore | compleet: logo, cover, tagline, overzicht, branche, 0-1, eigen bedrijf, 2025, 10 specialismen, Wageningen (zonder straat) | nofollow |
-| 2026-09-10 | GitHub-organisatie | https://github.com/SignumCore | avatar geüpload (monogram) | nofollow |
+| 2026-09-09 | GitHub-organisatie | https://github.com/SignumCore | beschrijving, website, e-mail, locatie, monogram-avatar; vier social links (LinkedIn, YouTube, Instagram, Reddit); repo `brand` heeft social preview | nofollow |
+| 2026-09-10 | LinkedIn bedrijfspagina | https://www.linkedin.com/company/signumcore | compleet: logo, cover, tagline, overzicht, branche, 0-1 medewerkers, eigen bedrijf, opgericht 2025, 10 specialismen, Wageningen zonder straat, knop naar /wachtlijst | nofollow |
+| 2026-09-10 | YouTube | https://www.youtube.com/@signumcore | kanaal live: banner, monogram, beschrijving (949/1000), 4 links (site, wachtlijst, LinkedIn, GitHub), contact-e-mail | nofollow |
+| 2026-09-10 | Instagram | https://www.instagram.com/signumcore_io/ | account live: naam SignumCore, monogram, bio met wachtlijst-link. Handle `signumcore` bezet, tweede keus. Website-veld kan alleen in de mobiele app, daarom staat de URL in de bio | nofollow |
+| 2026-09-10 | Reddit | https://www.reddit.com/user/SignumCoreio/ | account live: displaynaam SignumCore, beschrijving, twee social links (website, LinkedIn). Handle `signumcore` en `signumcore_io` beide bezet, **derde keus**. Avatar en banner blijven handwerk, zie hieronder | nofollow |
+| 2026-09-10 | Threads | — | staat klaar op één klik: threads.com toont "Join with Instagram — signumcore_io". Die knop is tegelijk het akkoord op de voorwaarden, dus die zet Mink zelf | nofollow |
+| 2026-09-10 | X | https://x.com/SignumCoreio | account live: naam SignumCore, monogram, header, bio, locatie Nederland, wachtlijst-link. Registratie liep via telefoon (e-mailroute bestaat niet meer). **Derde keus**: `signumcore` is bezet door een beschermd account uit juni 2011, `signumcore_io` was ook niet vrij | nofollow |
+| 2026-09-10 | Facebook-pagina | — | geblokkeerd: "We noticed suspicious activity: Finish SMS verification on mobile app before creating a new page". Drie pogingen, identieke melding, ook nadat de Meta-app was geïnstalleerd: de verificatie moet ín de app worden afgerond, installeren alleen is niet genoeg. Business Suite biedt geen uitweg | — |
+
+### Handle-afwijkingen (NAP-regel)
+
+`signumcore` is lang niet overal vrij. Vastgelegde afwijkingen:
+
+- **Instagram**: `signumcore_io` (eerste keus bezet)
+- **Reddit**: `SignumCoreio` (eerste en tweede keus bezet)
+- **X**: `SignumCoreio` (eerste en tweede keus bezet)
+
+Noteer elke verdere afwijking hier, zodat `sameAs` en de profielen niet uit de pas lopen.
+
+### GitHub-organisatie heeft maar vier plekken
+
+De org-instellingen bieden precies vier velden voor social links; die zitten vol met LinkedIn, YouTube, Instagram en Reddit. X past er niet meer bij. Dat is geen verlies: `lib/schema.ts` op de website draagt álle profielen in `sameAs` en dat is de bron die zoekmachines lezen.
+
+### Wat een bestandskiezer blokkeert
+
+Reddit (avatar, banner) heeft **geen** `input type=file` in de DOM, ook niet in shadow roots — gemeten met een recursieve `querySelectorAll`-walk over alle shadowRoots, resultaat lege lijst. Reddit maakt het veld pas aan bij de klik en opent direct een systeem-bestandskiezer. Die twee blijven dus handwerk. Uploads die wél lukken via een bereikbaar veld: LinkedIn (logo, cover), YouTube (banner, foto), Instagram (avatar), GitHub (org-avatar, repo social preview).

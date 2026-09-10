@@ -20,11 +20,12 @@ const KOP = 'Alles voor je aanvragen in één systeem.'
 const ACCENT = 'Je ziet wat het oplevert.'
 const SUB = 'Wij draaien je advertenties, meten je aanvragen en sturen bij.'
 const TAGS = ['JE ADVERTENTIES', 'DE METING', 'JE CIJFER', 'GRATIS TOOLS']
-const VOET = 'signumcore.io · vaste prijs · maandelijks opzegbaar'
-const BUREAU_KOP = 'Tracking voor al je klanten:'
-const BUREAU_ACCENT = 'gezet, bewaakt en gerepareerd.'
-const BUREAU_SUB = 'En jij ziet het eerst — niet je klant.'
-const BUREAU_TAGS = ['GTM', 'GA4', 'CONSENT MODE V2', 'SERVER-SIDE']
+const VOET = 'signumcore.io/webinar · vaste prijs · geen percentage over je budget'
+// Tweede galerijbeeld sinds 10 sep: de sleutel, niet de bureau-wereld (#565).
+const SLEUTEL_KOP = 'Niets verandert'
+const SLEUTEL_ACCENT = 'zonder jouw akkoord.'
+const SLEUTEL_SUB = 'Alles is terug te draaien. En er is een noodstop.'
+const SLEUTEL_TAGS = ['JOUW AKKOORD', 'TERUG TE DRAAIEN', 'NOODSTOP']
 
 const C = {
   wit: '#FFFFFF', zwart: '#0A0A0A', blauw: '#2B47D6', lime: '#C9F227',
@@ -178,7 +179,7 @@ const SPECS = [
   { naam: 'og-linkvoorbeeld-1200x630', w: 1200, h: 630, html: kaart({ w: 1200, h: 630 }) },
   { naam: 'github-social-preview-1280x640', w: 1280, h: 640, html: kaart({ w: 1280, h: 640, label: '// github.com/SignumCore' }) },
   { naam: 'producthunt-galerij-1270x760', w: 1270, h: 760, html: kaart({ w: 1270, h: 760 }) },
-  { naam: 'producthunt-galerij-bureaus-1270x760', w: 1270, h: 760, html: kaart({ w: 1270, h: 760, kop: BUREAU_KOP, accent: BUREAU_ACCENT, sub: BUREAU_SUB, tags: BUREAU_TAGS, label: '// voor marketingbureaus', voet: 'signumcore.io/voor-bureaus · GTM · GA4 · Consent Mode v2' }) },
+  { naam: 'producthunt-galerij-sleutel-1270x760', w: 1270, h: 760, html: kaart({ w: 1270, h: 760, kop: SLEUTEL_KOP, accent: SLEUTEL_ACCENT, sub: SLEUTEL_SUB, tags: SLEUTEL_TAGS, label: '// jij houdt de sleutel', voet: 'signumcore.io/webinar · een uur, live, vijf deelnemers' }) },
   { naam: 'instagram-post-1080x1080', w: 1080, h: 1080, html: kaart({ w: 1080, h: 1080, maxChars: 15 }) },
   { naam: 'instagram-story-1080x1920', w: 1080, h: 1920, html: kaart({ w: 1080, h: 1920, safe: { top: 250, bottom: 250 }, maxChars: 15, voet: 'signumcore.io<br>vaste prijs · maandelijks opzegbaar' }) },
   // Facebook: desktop toont alles, mobiel snijdt zijkanten af tot ~1109px breed; profielfoto overlapt linksonder.

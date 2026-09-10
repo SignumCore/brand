@@ -23,19 +23,23 @@ Kolom "Menselijk": wat alleen jij kunt (account aanmaken, e-mail/sms-verificatie
 
 Regels: (1) overal `signumcore`; is dat bezet, dan `signumcore_io`, daarna `signumcoreio`, en dat noteren in de log onderaan. (2) Op elk profiel de site-URL en waar het kan e-mail. (3) Eerste post per platform staat in `profiel-teksten.md` §6.
 
-## B. Ontwikkelaars- en techprofielen
+## B. Ontwikkelaars- en techprofielen — routes nagemeten op 10 sep 2026
 
-| # | Platform | Aanmelden | Wat | Menselijk | Dofollow |
-|---|---|---|---|---|---|
-| B1 | GitHub-organisatie | https://github.com/SignumCore (bestaat, jij bent admin) | beschrijving/website/e-mail/locatie: gezet via gh; profiel-README-repo `.github` en repo `brand`: via gh | avatar uploaden: Settings → Profile → Upload (`avatar-wit-500.png`); social preview per repo (`github-social-preview-1280x640.png`) | nofollow |
-| B2 | Dev.to | https://dev.to/enter?state=new-user | organisatieprofiel + syndicatie van blogartikelen met `canonical_url` naar signumcore.io | account (via GitHub) | nofollow, canonical telt |
-| B3 | Medium | https://medium.com/m/signin | publicatie "SignumCore" + import van blog met canonical | account | nofollow, canonical telt |
-| B4 | Hashnode | https://hashnode.com/onboard | blog op subdomein; `@signumcore` gaf HTTP 200 (controleren of bezet) | account | canonical |
-| B5 | StackShare | https://stackshare.io/signup | bedrijfsstack (Next.js, Vercel, Postgres, GTM, GA4) | account | verifiëren |
-| B6 | Hacker News | https://news.ycombinator.com/login | profiel met `about` + URL; later "Show HN" voor een tool | account | nofollow |
-| B7 | Indie Hackers | https://www.indiehackers.com/sign-up | productprofiel | account | nofollow |
-| B8 | Gravatar | https://gravatar.com | avatar + profiel aan info@signumcore.io (geverifieerde links) | account (WordPress.com) | verifiëren |
-| B9 | About.me | https://about.me/signup | profielpagina met link | account | nofollow |
+Dit is het **tweede publiek**: marketeers en techneuten. Ze zijn niet de doelgroep (zie `content-kalender.md` §1), maar ze delen het onderzoek en ze citeren de blog. Alles hier draagt de EN-teksten uit `profiel-teksten.md` §4.
+
+| # | Platform | Werkende route | Wat het vraagt | Waarde |
+|---|---|---|---|---|
+| B1 | GitHub-organisatie | https://github.com/SignumCore | **klaar**: beschrijving, website naar /webinar, e-mail, locatie, monogram-avatar, vier social links, profiel-README (5c85c99) | nofollow |
+| B2 | Dev.to | https://dev.to/enter | inloggen via GitHub, Google, Apple, Facebook of X — geen e-mailregistratie meer. Daarna blogartikelen syndiceren mét `canonical_url` naar signumcore.io | nofollow, canonical telt |
+| B3 | Medium | https://medium.com/m/signin | account; publicatie "SignumCore" en import met canonical | nofollow, canonical telt |
+| B4 | Hashnode | https://hashnode.com/onboard | account; blog op subdomein | canonical |
+| B5 | StackShare | https://stackshare.io → "Sign in" | account. **Let op**: `stackshare.io/signup` is géén registratiepagina maar de productpagina van een tool die "SignUp" heet | verifiëren |
+| B6 | Hacker News | https://news.ycombinator.com/login | account; profiel met `about` en URL. Later eventueel een "Show HN" voor een gratis tool | nofollow |
+| B7 | Indie Hackers | https://www.indiehackers.com/sign-up | account; productprofiel | nofollow |
+| B8 | Gravatar | https://gravatar.com | account (WordPress.com); avatar en geverifieerde links aan info@signumcore.io | verifiëren |
+| B9 | About.me | https://about.me/signup | account; profielpagina met link | nofollow |
+
+Alle negen behalve B1 vragen een account of een OAuth-koppeling, dus dat zijn stappen voor Mink.
 
 ## C. SaaS- en productgidsen — routes nagemeten op 10 sep 2026
 

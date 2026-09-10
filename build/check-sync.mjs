@@ -88,7 +88,7 @@ const VERBODEN = [
  * deze uitzondering meldt de wachter zijn eigen uitleg als overtreding.
  */
 function isUitlegkop(kop) {
-  return /^##\s*[02]\.\s/.test(kop) || /log|stand|handle|bestandskiezer|wat er .* veranderde|vier plekken/i.test(kop)
+  return /^##\s*[02]\.\s/.test(kop) || /log|stand|handle|bestandskiezer|wachter|wat er .* veranderde|vier plekken/i.test(kop)
 }
 
 function termenControleren() {
